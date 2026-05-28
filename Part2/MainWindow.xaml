@@ -1,0 +1,125 @@
+﻿<Window x:Class="Part2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Part2"
+        Background="Black"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid x:Name="HomeGrid" Visibility="Visible">
+
+            <!-- The logo -->
+            <Image
+        Source="/logo.jpg"
+        Height="200"
+        Width="200"
+        Margin="0,0,0,200"
+         />
+            <!-- The welcome message-->
+            <TextBlock  
+                Text="Welcome to the Cybersecurity Awareness Bot. You may Press the start button to continue"
+                Height="50"
+                Width="800"
+                TextAlignment="Center"
+                Foreground="White"
+                Margin="0,30,0,0"
+                FontFamily="Arial"
+                FontSize="19"
+                />
+
+            <!--The Start Button-->
+            <Button  
+             Height="40"
+             Width="300"
+             Margin="0,200,0,0"
+             Content="Start"
+             Click="Start"
+             Background="White"
+             
+              />
+
+        </Grid>
+        <Grid x:Name="UsernameGrid" Visibility="Hidden">
+            <!-- The logo -->
+            <Image
+             Source="/logo.jpg"
+             Height="200"
+             Width="300"
+             Margin="0,0,0,200"
+               />
+
+            <!-- Hint message-->
+            <TextBlock  
+               Text="Please enter your username to continue"
+               Height="20"
+               Width="270"
+               TextAlignment="Justify"
+               Margin="0,30,0,0"
+               FontFamily="Arial Black"
+                
+                />
+            <!-- The username input -->
+            <TextBox  
+              Height="40"
+              Width="270"
+              TextAlignment="Center"
+              Margin="0,100,0,0"
+              FontFamily="Arial Black"
+              x:Name="UsernameIN"
+                />
+
+            <!-- Error message-->
+            <TextBlock  
+                Text="Username cannot be empty."
+                Height="20"
+                Width="270"
+                TextAlignment="Justify"
+                Margin="0,180,0,0"
+                Foreground="Red"
+                FontFamily="Arial Black"
+                />
+
+            <!-- The submit button -->
+            <Button  
+             Height="40"
+             Width="270"
+             Margin="0,250,0,0"
+             Content="SubmitUsername"
+             Click="Submit_username"
+             Background="CadetBlue"
+             
+              />
+        </Grid>
+
+        <Grid x:Name="ChatGrid" Visibility="Hidden">
+                <!--List view to display the chat messages-->
+                <ListView  
+                    x:Name="Chats"
+                    Height="300"
+                    Margin="0,0,0,150"
+                    
+                     />
+                <!-- TextBox for asking questions -->
+                <TextBox
+                    x:Name="QuestionInput"
+                    Height="50"
+                    Width="480"
+                    Margin="0,300,300,0"
+                   
+                     />
+                <!-- Button to Submit-->
+                <Button
+                    Height="50"
+                    Width="280"
+                    Margin="490,300,0,0"
+                    Content="send"
+                    Click="send"
+                    
+                     />
+            </Grid>
+        </Grid>
+    
+</Window>

@@ -37,8 +37,8 @@ namespace Part2
             int counting = 0;
 
 
-        
-            public MainWindow()
+        //constructor for the main window
+        public MainWindow()
         {
             InitializeComponent();
 
@@ -300,7 +300,7 @@ namespace Part2
                         message += per_answer + "\n";
                     }
 
-                    error_method("ChatBot", message.TrimEnd('\n'));
+                    error_method("PBot", message.TrimEnd('\n'));
 
 
                     Chats.ScrollIntoView(Chats.Items[Chats.Items.Count - 1]);
@@ -309,7 +309,7 @@ namespace Part2
                 {
                     // when nothing is found
                     string[] fallbackMessages = {
-            "I'm sorry, I don't understand that. Could you rephrase your question?",
+            "I'm sorry, I could not understand that. Could you rephrase your question?",
             "I didn't quite get that. Try asking about cyber security topics.",
             "Hmm, I'm not sure how to respond to that. Can you ask something else?",
             "I couldn't find an answer for that. Please ask about programming, security, or technology.",
@@ -318,7 +318,7 @@ namespace Part2
 
                     Random random = new Random();
                     string fallbackMessage = fallbackMessages[random.Next(fallbackMessages.Length)];
-                    error_method("ChatBot", fallbackMessage);
+                    error_method("PBot", fallbackMessage);
                 }
 
                 // Clear the input box
@@ -393,7 +393,7 @@ namespace Part2
                                     string interests = line.Substring(colonIndex + 14).Trim();
 
                                     //show reminder of interests
-                                    error_method("ChatBot", "Just a reminder, you are interested in " + interests + " and ");
+                                    error_method("PBot", "Just a reminder, you are interested in " + interests + " and ");
                                     ai_check(interests);
                                     break;
                                 }
@@ -429,7 +429,7 @@ namespace Part2
                 };
 
                 // Set different background for user vs bot
-                if (name.ToLower().Contains("chatbot") || name.ToLower().Contains("chat"))
+                if (name.ToLower().Contains("pbot") || name.ToLower().Contains("chat"))
                 {// Light blue
                     messageBorder.Background = new SolidColorBrush(Color.FromRgb(240, 248, 255));
                     messageBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(173, 216, 230));
@@ -448,7 +448,7 @@ namespace Part2
                 };
 
                 // Set color based on sender
-                Brush nameColor = (name.ToLower().Contains("chatbot") || name.ToLower().Contains("chat")) ?
+                Brush nameColor = (name.ToLower().Contains("pbot") || name.ToLower().Contains("chat")) ?
                                   Brushes.DarkBlue : Brushes.DarkGreen;
 
                 Brush messageColor = Brushes.Black;

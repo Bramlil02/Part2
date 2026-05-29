@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+              <!-- The home grid -->
         <Grid x:Name="HomeGrid" Visibility="Visible">
 
             <!-- The logo -->
@@ -42,6 +42,7 @@
               />
 
         </Grid>
+            <!-- The username grid -->
         <Grid x:Name="UsernameGrid" Visibility="Hidden">
             <!-- The logo -->
             <Image
@@ -93,7 +94,7 @@
              
               />
         </Grid>
-
+           <!-- The chat grid -->
         <Grid x:Name="ChatGrid" Visibility="Hidden">
                 <!--List view to display the chat messages-->
                 <ListView  

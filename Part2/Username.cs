@@ -10,20 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Media;
 
 namespace Part2
-{
+{//start of namespace
     public class Username
-    {
+    {//start of class
 
         public string Submit_name(TextBox Username, ListView chats)
-        {//start of
+        {//start of method
 
-            //temp variables 
+            //temp variable for the filename 
             string fn = "Username.txt";
 
-            //check if the filename exists or not , then auto create
+            //if the file does not exist then create the file and write auto_create in the file
             if (!File.Exists(fn))
             {
-                //auto create the file using AppendAllText() function
+                //if the file does not exist then create the file and write auto_create in the file
                 File.AppendAllText(fn, "auto_create\n");
 
             }//end 
@@ -32,19 +32,21 @@ namespace Part2
             string name = Username.Text.ToString();
             bool found = check_name(name);
 
-            //check if the user is found or not and write the name in a text file
+            //if the name is not found then write the name in the text file and welcome the user
             if (!found)
             {//start of if
-                //write the name in a text file
+
+                //if the name is not found then write the name in the text file
                 File.AppendAllText(fn, name + "\n");
-                //then welcome the user
+
+                //if the name is not found then welcome the user
                 error_method("PBot:", "Hello " + name + " Welcome to the Cybersecurity Awareness Bot. How can I assist you with cybersecurity today?. ", chats);
 
             }//end of if
             else
             {//start of else
 
-                //welcome the user back
+                //if the name is found then welcome the user back
                 error_method("PBot:", "Hello " + name + " welcome back, how can I assist you with cybersecurity today?", chats);
 
             }//end of else
@@ -57,13 +59,14 @@ namespace Part2
 
         }//end of
 
-        //method to check name of the user
+        //method to check the name of the user in the text file
         private Boolean check_name(string name)
         {//start
 
-            //temp variable
+            //temp variable for the filename
             string fn = "Username.txt";
 
+            //boolean variable to check if the name is found or not
             bool found_name = false;
 
 
@@ -78,7 +81,7 @@ namespace Part2
                 if (name_found.ToLower() == name.ToLower())
                 {//start if
 
-                    //found_name set to true
+                    //if the name is found then change the value of found_name to true
                     found_name = true;
 
                 }//end of if
@@ -88,19 +91,17 @@ namespace Part2
 
 
 
-
-            //return the status of found or not [ true or false ]
+            //return the value of found_name
             return found_name;
 
         }//end check method
 
 
-
-        //error method
+        //method to display the message in the chatbox
         private void error_method(string name, string message, ListView chats)
         {//star of error mehtod
 
-            // Create a border for chats
+            //create a border for the message
             Border messageBorder = new Border
             {
                 Margin = new Thickness(0, 2, 0, 2),
@@ -108,7 +109,7 @@ namespace Part2
                 CornerRadius = new CornerRadius(5)
             };
 
-            // Set different background for user vs bot
+            // Set different background and border colors for user vs bot
             if (name.ToLower().Contains("pbot") || name.ToLower().Contains("chat"))
             {// Sea Green
                 messageBorder.Background = new SolidColorBrush(Color.FromRgb(46, 139, 87));
@@ -127,7 +128,7 @@ namespace Part2
                 Margin = new Thickness(2)
             };
 
-            // Set color based on sender
+            // Set different text color for user vs bot
             Brush nameColor = (name.ToLower().Contains("pbot") || name.ToLower().Contains("chat")) ?
                               Brushes.LightSkyBlue : Brushes.DarkGray;
 
@@ -154,7 +155,7 @@ namespace Part2
 
 
 
-    }
+    }//end of class
 
-}
+}//end of namespace
 

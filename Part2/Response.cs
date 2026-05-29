@@ -6,19 +6,22 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Part2
-{
+{//start of namespace
     public class Response
-    {
+    {//start of class
 
         public Response(ArrayList reply, ArrayList ignore)
         {//start of constructor
 
+            //call the methods to fill the lists
             answers(reply);
             words(ignore);
 
         }//end of constructor
         private void words(ArrayList ignoring)
-        {
+        {//start of method
+
+            //add words to ignore list
             ignoring.Add("hi");
             ignoring.Add("whats up");
             ignoring.Add("Heyyyyyy");
@@ -30,6 +33,8 @@ namespace Part2
         }
         public void answers(ArrayList answers)
         {//start of method
+
+            //add responses to the answer list
             answers.Add("Im good how are you.");
             answers.Add("You can ask me about passwords, phishing, and safe browsing.");
             answers.Add("Thats good to hear! How can I assist you with cybersecurity today?");
@@ -40,7 +45,9 @@ namespace Part2
             answers.Add("Sorry, I dont understand.Could you repharse? or just stick to cybersecurity topics.");
 
 
-            //sentimated responses
+            
+
+            //sentimated responses for different emotions
 
             answers.Add("frustrated i understand you're frustrated. let's work through the issue step by step.");
             answers.Add("frustrated it's okay to feel frustrated when things aren't working. i'm here to help.");
@@ -73,6 +80,6 @@ namespace Part2
 
 
 
-        }
-    }
-}
+        }//end of method
+    }//end of class
+}//end of namespace

@@ -35,17 +35,60 @@ namespace Part2
         {//start of method
 
             //add responses to the answer list
+
+            //greeting 
             answers.Add("Im good how are you.");
-            answers.Add("You can ask me about passwords, phishing, and safe browsing.");
-            answers.Add("Thats good to hear! How can I assist you with cybersecurity today?");
-            answers.Add("My purpose is to teach you about cybersecurity and how to stay safe online.");
-            answers.Add(" Use strong password with letters, numbers, and symbols. Never share your password!");
-            answers.Add("Phishing is when attackers trick you into giving personal info. Always check emails and links carefully.");
-            answers.Add("Only visit secure websites (https://) and avoid clicking suspicious links.");
-            answers.Add("Sorry, I dont understand.Could you repharse? or just stick to cybersecurity topics.");
-
-
             
+            //Topics to discuss
+            answers.Add("You can ask me about passwords, phishing, and safe browsing.");
+            
+            //default response
+            answers.Add("Sorry, I dont understand.Could you repharse? or just stick to cybersecurity topics.");
+            
+            //purpose of Cyber awareness bot
+            answers.Add("purpose my purpose is to educate you on how to stay safe online and guide your cybersecurity questions.");
+            answers.Add("purpose i help users understand online safety and digital protection.");
+            answers.Add("purpose i assist with cybersecurity awareness and safety guidance.");
+
+            //cybersecurity related responses
+            answers.Add("cybersecurity cybersecurity is about protecting systems and networks from digital threats.");
+            answers.Add("cybersecurity it involves protecting devices and online accounts from attacks.");
+            answers.Add("cybersecurity it focuses on securing digital information and systems.");
+            
+            //phishing
+            answers.Add("phishing phishing is a scam where attackers pretend to be trusted sources to steal information.");
+            answers.Add("phishing it uses fake messages or websites to trick users into revealing sensitive data.");
+            answers.Add("phishing attackers use deception to make users believe they are legitimate.");
+            
+            //firewall
+            answers.Add("firewall a firewall controls network traffic based on security rules.");
+            answers.Add("firewall it helps block unwanted access to your device or network.");
+            answers.Add("firewall it acts as a protective barrier between trusted and untrusted networks.");
+            
+            //password
+            answers.Add("password a password is used to secure access to your accounts or devices.");
+            answers.Add("password it should be strong, long and not easy to guess.");
+            answers.Add("password avoid using personal details when creating one.");
+            
+            //hacked account
+            answers.Add("hacked account immediately secure your account and log out of all devices.");
+            answers.Add("hacked account contact support if your account has been compromised.");
+            answers.Add("hacked account enable extra security like two-factor authentication.");
+            
+            //fraud
+            answers.Add("fraud contact your bank immediately if fraud is detected.");
+            answers.Add("fraud report suspicious financial activity to the authorities.");
+            answers.Add("fraud monitor your accounts for unusual activity.");
+            
+            //malicious Cyber awareness bot
+            answers.Add("malicious Cyber awareness bot malicious bots often create urgency to trick users.");
+            answers.Add("malicious Cyber awareness bot fake chatbots may ask for sensitive information.");
+            answers.Add("malicious Cyber awareness bot be cautious if a bot pressures you for personal data.");
+            
+            //vpn
+            answers.Add("vpn a vpn helps protect your privacy on public wi-fi.");
+            answers.Add("vpn it encrypts your internet traffic for safety.");
+            answers.Add("vpn it improves security when using public networks.");
 
             //sentimated responses for different emotions
 
